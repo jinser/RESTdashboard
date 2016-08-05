@@ -1,0 +1,71 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/bower_components/angular-ui-grid/ui-grid.css" />
+    
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <title>REST Web Service Dashboard</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default  navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/#/">Dashboard</a>
+            </div>
+            
+        </div>
+    </nav>
+    
+    <div ui-view ng-controller="MainCtrl">
+      <div class="jumbotron">
+		    <p class="lead"> </p>
+		    <div class="text-center">
+		      <div class="textstyle">
+		        <form name="inputWSForm">
+  		        <label>REST Web Service URL:
+  		          <input type="url" name="inputurl" ng-model="url.text">
+  		           <span class="error" ng-show="inputWSForm.inputurl.$error.url">
+                  Not valid url!
+                 </span>
+  		        </label>
+  		        
+  		        <button ng-click="refreshUrl()">Go</button>
+  		       
+  		        <!-- output type="text" class="printSelection">{{printSelection}}</output <button type="button" ng-click="getCurrentSelection()">Get Nested Data Info</button>-->
+  		        
+  		        <div id="grid1"  ng-if="!refresh" ui-grid="gridOptions" ui-grid-cellNav ui-grid-pinning ui-grid-resize-columns ui-grid-move-columns ui-grid-selection class="grid"></div>
+		           <div ng-controller="ModalCtrl">
+  		          <button type="button" ng-click="showModal()">Get Nested Data</button>
+  		        </div>
+		        </form>
+		      </div>
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
