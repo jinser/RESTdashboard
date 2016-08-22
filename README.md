@@ -6,9 +6,9 @@ The button "Get Nested Data" allows 2nd-order nested JSON data to be viewed in a
 The button "Generate Line Graph" creates a line graph where the x-axis is the first column and the y-axis is the second column selected from the grid. 
 
 ## Using the Line Graph Functionality
-1) Hide columns that are not required and leave only 2 columns behind. 
-2) Click on the Generate Line Graph button
-3) Graph will be generated, string values are automatically converted to a number using the string length
+1. Hide columns that are not required and leave only 2 columns behind. 
+2. Click on the Generate Line Graph button
+3. Graph will be generated, string values are automatically converted to a number using the string length
 
 ## Workspace
 
