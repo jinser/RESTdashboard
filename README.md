@@ -1,14 +1,19 @@
 # Description
 This dashboard allows anyone to enter a REST web service URL to view the data using angular-ui-grid and d3.js line graph.
+![ScreenShot](https://raw.github.com/jinser/RESTdashboard/master/dashboard.png)
 
 The button "Get Nested Data" allows 2nd-order nested JSON data to be viewed in a grid in a new modal popup.
+![ScreenShot](https://raw.github.com/jinser/RESTdashboard/master/nesteddata.png)
 
 The button "Generate Line Graph" creates a line graph where the x-axis is the first column and the y-axis is the second column selected from the grid. 
 
 ## Using the Line Graph Functionality
+
 1. Hide columns that are not required and leave only 2 columns behind. 
 2. Click on the Generate Line Graph button
 3. Graph will be generated, string values are automatically converted to a number using the string length
+
+![ScreenShot](https://raw.github.com/jinser/RESTdashboard/master/linegraph.png)
 
 ## Workspace
 
